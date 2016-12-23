@@ -2,8 +2,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
+	<style>
+		body{
+			margin: 0 auto;
+		}
+		.s{
+			background-color: #E5E5E5;
+			height: 100%;
+		}
+		.ssvg{
+			margin-top: 5%;
+			margin-left: 10%;
+			cursor: pointer;
+		}
+		.st{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-	<img src="santa.svg" alt="svg/image" onclick="document.getElementByID('santa')">
+	<div class="s">
+	<p onclick="santa()">
+		<img class="ssvg" src="santa.svg" alt="svg/image" style="height: 80%; width: 80%;">
+	</p>
+	<p id="santa" class="st"></p>
+	<script>
+	function santa() {
+		document.getElementById("santa").innerHTML = "Hello World!";
+	}
+	</script>
+	</div>
 </body>
 </html>
